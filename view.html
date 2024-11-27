@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel File Processor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            text-align: center;
+        }
+        input[type="file"] {
+            margin: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload and Process Excel File</h1>
+
+    <form action="/process" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".xlsx, .xls" required>
+        <br>
+        <button type="submit">Process File</button>
+    </form>
+
+    <hr>
+    <h2>Download Processed File</h2>
+    <p>After uploading your file, click the button below to download the processed file:</p>
+    <a href="/process" class="btn-download">
+        <button>Download Processed File</button>
+    </a>
+</body>
+</html>
